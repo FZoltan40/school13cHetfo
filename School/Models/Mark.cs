@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Text.Json.Serialization;
 
 namespace School.Models;
 
@@ -18,6 +17,6 @@ public partial class Mark
     public DateTime? UpdatedTime { get; set; }
 
     public Guid? StudentId { get; set; }
-
+    [JsonIgnore]
     public virtual Student? Student { get; set; }
 }
